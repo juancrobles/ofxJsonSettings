@@ -116,38 +116,73 @@ string ofxJsonSettings::getAsJsonString(){
 }
 
 string& ofxJsonSettings::getString(string key) {
-	return get()._stringVal(key);
+    return get()._stringVal(key);
 }
 bool& ofxJsonSettings::getBool(string key) {
-	return get()._boolVal(key);
+    return get()._boolVal(key);
 }
 int& ofxJsonSettings::getInt(string key) {
-	return get()._intVal(key);
+    return get()._intVal(key);
 }
 float& ofxJsonSettings::getFloat(string key) {
-	return get()._floatVal(key);
+    return get()._floatVal(key);
 }
 double& ofxJsonSettings::getDouble(string key) {
-	return get()._doubleVal(key);
+    return get()._doubleVal(key);
 }
 ofVec2f& ofxJsonSettings::getVec2(string key) {
-	return get()._vec2Val(key);
+    return get()._vec2Val(key);
 }
 ofVec3f& ofxJsonSettings::getVec3(string key) {
-	return get()._vec3Val(key);
+    return get()._vec3Val(key);
 }
 ofVec4f& ofxJsonSettings::getVec4(string key) {
-	return get()._vec4Val(key);
+    return get()._vec4Val(key);
 }
 ofColor& ofxJsonSettings::getColor(string key) {
-	return get()._colorVal(key);
+    return get()._colorVal(key);
 }
 ofxJSON ofxJsonSettings::getJson(string key) {
-	return get()._jsonVal(key);
+    return get()._jsonVal(key);
+}
+
+string& ofxJsonSettings::getKeyAsString(string key) {
+	return _stringVal(key);
+}
+bool& ofxJsonSettings::getKeyAsBool(string key) {
+	return _boolVal(key);
+}
+int& ofxJsonSettings::getKeyAsInt(string key) {
+	return _intVal(key);
+}
+float& ofxJsonSettings::getKeyAsFloat(string key) {
+	return _floatVal(key);
+}
+double& ofxJsonSettings::getKeyAsDouble(string key) {
+	return _doubleVal(key);
+}
+ofVec2f& ofxJsonSettings::getKeyAsVec2(string key) {
+	return _vec2Val(key);
+}
+ofVec3f& ofxJsonSettings::getKeyAsVec3(string key) {
+	return _vec3Val(key);
+}
+ofVec4f& ofxJsonSettings::getKeyAsVec4(string key) {
+	return _vec4Val(key);
+}
+ofColor& ofxJsonSettings::getKeyAsColor(string key) {
+	return _colorVal(key);
+}
+ofxJSON ofxJsonSettings::getKeyAsJson(string key) {
+	return _jsonVal(key);
 }
 
 bool ofxJsonSettings::exists(string key) {
-	return get()._exists(key);
+    return get()._exists(key);
+}
+
+bool ofxJsonSettings::existsKey(string key) {
+	return _exists(key);
 }
 
 bool ofxJsonSettings::remove(string key) {

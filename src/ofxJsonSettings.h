@@ -34,19 +34,31 @@ public:
 	// Use this to get values
 	// These return references, so you can bind directly to a GUI library that
 	// supports variable binding
-	static string& getString(string key);
-	static bool& getBool(string key);
-	static int& getInt(string key);
-	static float& getFloat(string key);
-	static double& getDouble(string key);
-	static ofVec2f& getVec2(string key);
-	static ofVec3f& getVec3(string key);
-	static ofVec4f& getVec4(string key);
-	static ofColor& getColor(string key);
-	static ofxJSON getJson(string key);
+    static string& getString(string key);
+    static bool& getBool(string key);
+    static int& getInt(string key);
+    static float& getFloat(string key);
+    static double& getDouble(string key);
+    static ofVec2f& getVec2(string key);
+    static ofVec3f& getVec3(string key);
+    static ofVec4f& getVec4(string key);
+    static ofColor& getColor(string key);
+    static ofxJSON getJson(string key);
+
+	string& getKeyAsString(string key);
+	bool& getKeyAsBool(string key);
+	int& getKeyAsInt(string key);
+	float& getKeyAsFloat(string key);
+	double& getKeyAsDouble(string key);
+	ofVec2f& getKeyAsVec2(string key);
+	ofVec3f& getKeyAsVec3(string key);
+	ofVec4f& getKeyAsVec4(string key);
+	ofColor& getKeyAsColor(string key);
+	ofxJSON getKeyAsJson(string key);
 
 	// Use this to check if a key exists
 	static bool exists(string key);
+    bool existsKey(string key);
 
 	static bool remove(string key);
 
