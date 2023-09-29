@@ -276,6 +276,8 @@ ofxJSON ofxJsonSettings::_jsonVal(string& key) {
 	} else if (jsonStore.isMember(key)) {
 		return jsonStore[key];
 	}
+    
+    return ofxJSONElement();
 }
 
 string ofxJsonSettings::_stringValFromJson(ofxJSON& data, string& key) {
@@ -492,6 +494,8 @@ bool ofxJsonSettings::_remove(string key) {
 		ofLogError("Settings") << "error for key: " << key << ": " << e.what();
 		return false;
 	}
+    
+    return false;
 }
 
 ofxJSON ofxJsonSettings::getNestedChild(ofxJSON data, string key, bool supressWarning) {
